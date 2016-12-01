@@ -1,0 +1,31 @@
+{
+  "name": "jsampler_server",
+  "version": "0.0.1",
+  "description": "Rest API for JSampler",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node build/server.js",
+    "dev": "source .env && nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir build",
+    "eslint": "eslint --ext .js ./src"
+  },
+  "author": "Tero Taipale",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "body-parser": "^1.15.2",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "knex": "^0.11.7",
+    "lodash": "^4.13.1",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "pg": "^6.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "eslint": "^3.0.0",
+    "nodemon": "^1.9.2"
+  }
+}
